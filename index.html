@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicBridge AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="hero">
+        <div class="brand">
+            <div class="logo">🧭</div>
+            <span>CivicBridge <b>AI</b></span>
+        </div>
+
+        <div class="badge">GEMINI POWERED • ACTION NAVIGATOR</div>
+
+        <h1>
+            Don't know where to start?
+            <span>Just tell us what happened.</span>
+        </h1>
+
+        <p class="hero-text">
+            Turn confusing real-world situations, notices and documents
+            into clear, prioritized and verifiable next steps.
+        </p>
+
+        <div class="trust-row">
+            <span>✦ Understand</span>
+            <span>→</span>
+            <span>⚡ Prioritize</span>
+            <span>→</span>
+            <span>✓ Take action</span>
+            <span>→</span>
+            <span>🔎 Verify</span>
+        </div>
+    </header>
+
+
+    <section class="input-card">
+
+        <div class="section-title">
+            <div class="icon-circle">💬</div>
+            <div>
+                <h2>Tell us what happened</h2>
+                <p>Don't worry about using the right words. Explain naturally.</p>
+            </div>
+        </div>
+
+        <textarea
+            id="userInput"
+            placeholder="Example: I received a scholarship message but I don't understand what I need to do next..."
+        ></textarea>
+
+        <div class="input-bottom">
+
+            <label class="upload-btn">
+                📎 Upload document
+                <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/*,.pdf,.txt"
+                    onchange="showFileName()"
+                >
+            </label>
+
+            <span id="fileName">No document selected</span>
+
+            <button
+                class="main-btn"
+                onclick="analyzeProblem()"
+            >
+                ✨ Make Sense of This
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="examples-section">
+
+        <div class="section-heading">
+            <div>
+                <h2>Real-world situations</h2>
+                <p>See how CivicBridge turns uncertainty into action.</p>
+            </div>
+        </div>
+
+        <div class="example-grid">
+
+            <button onclick="useExample('scholarship')" class="example-card">
+                <span class="example-icon">🎓</span>
+                <div>
+                    <strong>Scholarship</strong>
+                    <small>Confusing scholarship message</small>
+                </div>
+                <span class="arrow">→</span>
+            </button>
+
+            <button onclick="useExample('notice')" class="example-card">
+                <span class="example-icon">📄</span>
+                <div>
+                    <strong>Official Notice</strong>
+                    <small>Don't understand a notice</small>
+                </div>
+                <span class="arrow">→</span>
+            </button>
+
+            <button onclick="useExample('travel')" class="example-card">
+                <span class="example-icon">🚌</span>
+                <div>
+                    <strong>Travel Problem</strong>
+                    <small>Cancelled journey</small>
+                </div>
+                <span class="arrow">→</span>
+            </button>
+
+            <button onclick="useExample('appointment')" class="example-card">
+                <span class="example-icon">📅</span>
+                <div>
+                    <strong>Appointment</strong>
+                    <small>What should I take?</small>
+                </div>
+                <span class="arrow">→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section id="result" class="result-card">
+
+        <div class="empty-result">
+            <div class="compass">🧭</div>
+            <h2>Your action plan will appear here</h2>
+            <p>
+                CivicBridge will understand your situation,
+                identify what matters and guide you toward the next step.
+            </p>
+        </div>
+
+    </section>
+
+
+    <section class="how-section">
+
+        <h2>How CivicBridge works</h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <span>01</span>
+                <b>You explain</b>
+                <p>Speak naturally. No complicated forms.</p>
+            </div>
+
+            <div class="step">
+                <span>02</span>
+                <b>Gemini understands</b>
+                <p>Messy human intent becomes structured information.</p>
+            </div>
+
+            <div class="step">
+                <span>03</span>
+                <b>We prioritize</b>
+                <p>Important facts, missing details and urgency are identified.</p>
+            </div>
+
+            <div class="step">
+                <span>04</span>
+                <b>You act safely</b>
+                <p>Get practical actions plus verification warnings.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <strong>CivicBridge AI</strong>
+        <span>Human intent → structured action</span>
+        <span>Powered by Gemini</span>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
